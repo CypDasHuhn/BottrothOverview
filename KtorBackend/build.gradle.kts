@@ -9,6 +9,7 @@ plugins {
     kotlin("jvm") version "1.9.22"
     id("io.ktor.plugin") version "2.3.8"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22"
+    id("org.hidetake.swagger.generator") version "2.19.2"
 }
 
 group = "com.bottroth"
@@ -39,6 +40,10 @@ dependencies {
     implementation("io.ktor:ktor-server-auth-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    testImplementation("io.ktor:ktor-server-tests-jvm")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    implementation("org.testng:testng:7.7.0")
+    implementation("io.github.classgraph:classgraph:4.8.90")
+    implementation("io.ktor:ktor-server-tests-jvm")
+    implementation("io.ktor:ktor-server-test-host:$ktor_version")
+    implementation("io.ktor:ktor-client-mock:$ktor_version")
+    implementation("org.jetbrains.kotlin:kotlin-test")
 }

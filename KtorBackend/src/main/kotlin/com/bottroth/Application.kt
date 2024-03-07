@@ -1,6 +1,7 @@
 package com.bottroth
 
 import com.bottroth.plugins.*
+import com.bottroth.endpoints.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
